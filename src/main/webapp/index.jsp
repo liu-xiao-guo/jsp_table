@@ -23,8 +23,8 @@
 %>	
 	<table border="2">
 	<tr>
-		<td>ID</td>
-		<td>AGE</td>
+		<td>Id</td>
+		<td>Age</td>
 		<td>First</td>
 		<td>Last</td>
 	</tr>
@@ -32,10 +32,10 @@
 		while(rs.next())
 		{
 %>
-		<tr><td><%=rs.getInt("id"); %></td></tr>
-		<tr><td><%=rs.getInt("age"); %></td></tr>
-		<tr><td><%=rs.getString("first"); %></td></tr>
-		<tr><td><%=rs.getString("last"); %></td></tr>
+		<tr><td><%=rs.getInt("id")%></td></tr>
+		<tr><td><%=rs.getInt("age")%></td></tr>
+		<tr><td><%=rs.getString("first")%></td></tr>
+		<tr><td><%=rs.getString("last")%></td></tr>
 <%
 		}
 %>
