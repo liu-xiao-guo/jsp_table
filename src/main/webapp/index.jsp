@@ -32,17 +32,19 @@
 		while(rs.next())
 		{
 %>
-		<tr><td><%=rs.getInt("id")%></td></tr>
-		<tr><td><%=rs.getInt("age")%></td></tr>
-		<tr><td><%=rs.getString("first")%></td></tr>
-		<tr><td><%=rs.getString("last")%></td></tr>
+		<tr>
+			<td><%=rs.getInt("id")%></td>
+			<td><%=rs.getInt("age")%></td>
+			<td><%=rs.getString("first")%></td>
+			<td><%=rs.getString("last")%></td>
+		</tr>
 <%
 		}
 %>
 	</table>
 	
 <%
-	// close the connection
+    // close the connection
     rs.close();
     stmt.close();
     con.close();		
