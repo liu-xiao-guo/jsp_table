@@ -20,7 +20,12 @@
     String query="select * from Employees";
     Statement stmt=con.createStatement();
 	ResultSet rs=stmt.executeQuery(query);
-%>	
+%>	   
+    <br />
+    <h3>The data read from database is:</h3>
+    <hr>
+    <br />
+    
 	<table border="2">
 	<tr>
 		<td>Id</td>
