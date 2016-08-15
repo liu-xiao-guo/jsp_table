@@ -23,7 +23,6 @@
 %>	   
     <br />
     <h3>The data read from database is:</h3>
-    <hr>
     <br />
     
 	<table border="2">
