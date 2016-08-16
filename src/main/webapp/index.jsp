@@ -8,14 +8,14 @@
 <h1>JDBC Connection example</h1>
 
 <%
-  String user = "owncloud";
+  String user = "demouser";
   String password = "123";
   
   try {
     java.sql.Connection con;
     Class.forName("com.mysql.jdbc.Driver");
     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/owncloud", user, password);
-    out.println (user + " database successfully opened.");
+    out.println (user + " account opens database successfully opened.");
     
     String query="select * from Employees";
     Statement stmt=con.createStatement();
@@ -33,17 +33,17 @@
 		<td>Last</td>
 	</tr>
 <%
-		while(rs.next())
-		{
+	while(rs.next())
+	{
 %>
-		<tr>
-			<td><%=rs.getInt("id")%></td>
-			<td><%=rs.getInt("age")%></td>
-			<td><%=rs.getString("first")%></td>
-			<td><%=rs.getString("last")%></td>
-		</tr>
+	<tr>
+		<td><%=rs.getInt("id")%></td>
+		<td><%=rs.getInt("age")%></td>
+		<td><%=rs.getString("first")%></td>
+		<td><%=rs.getString("last")%></td>
+	</tr>
 <%
-		}
+	}
 %>
 	</table>
 	
@@ -51,7 +51,7 @@
     // close the connection
     rs.close();
     stmt.close();
-    con.close();		
+    con.close();
   }
   catch(SQLException e) {
     out.println("SQLException caught: " +e.getMessage());
@@ -60,4 +60,3 @@
 
 </body>
 </html>
-
