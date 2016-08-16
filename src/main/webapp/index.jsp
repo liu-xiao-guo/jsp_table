@@ -14,7 +14,7 @@
   try {
     java.sql.Connection con;
     Class.forName("com.mysql.jdbc.Driver");
-    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/owncloud", user, password);
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb", user, password);
     out.println (user + " account opens database successfully opened.");
     
     String query="select * from Employees";
